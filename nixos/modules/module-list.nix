@@ -162,6 +162,7 @@
   ./programs/systemtap.nix
   ./programs/steam.nix
   ./programs/sway.nix
+  ./programs/hikari.nix
   ./programs/system-config-printer.nix
   ./programs/thefuck.nix
   ./programs/tmux.nix

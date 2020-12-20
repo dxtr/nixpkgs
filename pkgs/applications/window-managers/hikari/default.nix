@@ -1,4 +1,4 @@
-{ stdenv, fetchzip,
+{ stdenv, fetchzip, makeWrapper,
   pkgconfig, bmake,
   cairo, glib, libevdev, libinput, libxkbcommon, linux-pam, pango, pixman,
   libucl, wayland, wayland-protocols, wlroots,
@@ -10,13 +10,9 @@
   }
 }:
 
-let
-  pname = "hikari";
+stdenv.mkDerivation rec {
+  pname = "hikari-unwrapped";
   version = "2.2.2";
-in
-
-stdenv.mkDerivation {
-  inherit pname version;
 
   src = fetchzip {
     url = "https://hikari.acmelabs.space/releases/${pname}-${version}.tar.gz";

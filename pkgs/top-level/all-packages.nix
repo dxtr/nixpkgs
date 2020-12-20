@@ -21999,6 +21999,7 @@ in
   waybar = callPackage ../applications/misc/waybar {};
 
   hikari = callPackage ../applications/window-managers/hikari { };
+  hikari-unwrapped = callPackage ../applications/window-managers/hikari/wrapper.nix { };
 
   i3 = callPackage ../applications/window-managers/i3 {
     xcb-util-cursor = if stdenv.isDarwin then xcb-util-cursor-HEAD else xcb-util-cursor;
